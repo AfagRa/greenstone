@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Stone – Building resilience, one stone at a time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            forest: {
+              500: '#2d5a27',
+              600: '#245020',
+              700: '#1b3d18',
+            },
+            charcoal: {
+              800: '#292524',
+              900: '#1c1917',
+            },
+            offwhite: '#fafaf9',
+            mint: '#e8f5e9',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    /* Navbar over hero: light text; after scroll: dark text */
+    #navbar:not(.scrolled) .nav-brand span:last-child,
+    #navbar:not(.scrolled) .nav-links a,
+    #navbar:not(.scrolled) .menu-btn { color: #fff; }
+    #navbar:not(.scrolled) .nav-links a:hover { color: #86efac; }
+    #navbar.scrolled .nav-brand span:last-child,
+    #navbar.scrolled .nav-links a,
+    #navbar.scrolled .menu-btn { color: #1c1917; }
+    #navbar.scrolled .nav-links a:hover { color: #2d5a27; }
+  </style>
+</head>
+<body class="text-charcoal-900 antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <a href="#home" class="flex items-center gap-2 nav-brand">
+      <img class="w-10 h-10" src="./img/logo.png" alt="Green Stone Logo" /> 
+      <span class="font-semibold text-lg">Green Stone</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 nav-links">
+        <li><a href="#home" class="transition">Home</a></li>
+        <li><a href="#product" class="transition">Product</a></li>
+        <li><a href="#technology" class="transition">Technology</a></li>
+        <li><a href="#about" class="transition">About Us</a></li>
+        <li><a href="#team" class="transition">Team</a></li>
+        <li><a href="#contact" class="transition">Contact</a></li>
+      </ul>
+      <button type="button" class="md:hidden p-2 menu-btn" id="menu-toggle" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-4">
+      <ul class="space-y-2">
+        <li><a href="#home" class="block py-2 text-charcoal-800">Home</a></li>
+        <li><a href="#product" class="block py-2 text-charcoal-800">Product</a></li>
+        <li><a href="#technology" class="block py-2 text-charcoal-800">Technology</a></li>
+        <li><a href="#about" class="block py-2 text-charcoal-800">About Us</a></li>
+        <li><a href="#team" class="block py-2 text-charcoal-800">Team</a></li>
+        <li><a href="#contact" class="block py-2 text-charcoal-800">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="relative min-h-screen flex items-center bg-charcoal-800">
+      <div class="absolute inset-0">
+        <img
+          src="./img/hero_bg.jpg"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-charcoal-900/50"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-2xl leading-tight">
+          Building resilience, one stone at a time
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-white/90 max-w-xl">
+          We are building resilient structures that can self-repair, reduce maintenance costs, and extend their lifespan, contributing to a more sustainable future.
+        </p>
+        <a href="#contact" class="inline-block mt-8 px-8 py-3.5 bg-forest-500 hover:bg-forest-600 text-white font-medium rounded-xl transition">
+          Get in touch
+        </a>
+      </div>
+    </section>
+
+    <!-- Product -->
+    <section id="product" class="bg-offwhite py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <img
+              src="./img/product.jpg"
+              alt="Self-healing hydrogel capsules in a petri dish"
+              class="w-full rounded-lg shadow-lg object-cover aspect-square max-h-[480px]"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900">Our Product</h2>
+            <p class="mt-2 text-xl text-charcoal-800/80">Self-healing hydrogel capsules</p>
+            <div class="mt-6 space-y-4 text-charcoal-800 leading-relaxed">
+              <p>
+                Our innovative product harnesses the power of biology to create construction materials that heal themselves. We encapsulate beneficial bacteria within hydrogel capsules that are mixed into concrete at the point of casting.
+              </p>
+              <p>
+                When cracks form and water enters, the capsules rupture and release bacteria that precipitate calcium carbonate—effectively sealing the crack and restoring structural integrity. This approach reduces long-term maintenance, extends building lifespan, and supports a more sustainable built environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section id="technology" class="bg-gray-100 py-16 sm:py-24">
+      <h2 class="text-center text-2xl sm:text-3xl font-semibold text-gray-400 uppercase tracking-wide mb-12 sm:mb-16">
+        Technology
+      </h2>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-3 gap-10 lg:gap-12">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-sm mb-4">
+              <img
+                src="./img/icon2.png"
+                alt="Bacteria Cultivation"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-lg font-bold text-charcoal-900">Bacteria Cultivation</h3>
+            <p class="mt-2 text-charcoal-800 text-sm leading-relaxed">
+              We cultivate specific strains of bacteria that produce calcium carbonate when activated by moisture, forming the basis of our self-healing mechanism.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-sm mb-4">
+              <img src="./img/icon3.png" alt="Hydrogel Preparation" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="text-lg font-bold text-charcoal-900">Hydrogel Preparation</h3>
+            <p class="mt-2 text-charcoal-800 text-sm leading-relaxed">
+              Bacteria are encapsulated in a durable hydrogel matrix that protects them until cracks allow water to trigger the healing reaction.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-sm mb-4">
+              <img src="./img/icon1.png" alt="Capsules Ready for Cement" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="text-lg font-bold text-charcoal-900">Capsules Ready for Cement</h3>
+            <p class="mt-2 text-charcoal-800 text-sm leading-relaxed">
+              The finished capsules are designed to be mixed directly into cement, ensuring even distribution and long-term stability within the structure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Achievements -->
+    <section id="about" class="bg-mint py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <!-- Row 1: About Us - text left, image right -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-charcoal-900">About Us</h2>
+            <div class="mt-6 space-y-4 text-charcoal-800 leading-relaxed">
+              <p>
+                Green Stone is a biotech company focused on sustainable construction. Our mission is to bring nature's self-healing capabilities to the built environment, reducing waste and extending the life of infrastructure.
+              </p>
+              <p>
+                We combine microbiology, materials science, and engineering to develop solutions that make concrete more durable and eco-friendly. Based in Baku, Azerbaijan, we work with partners globally to build a more resilient future.
+              </p>
+            </div>
+          </div>
+          <div>
+            <img
+              src="./img/greenhackathon.png"
+              alt="Green Stone team with award"
+              class="w-full rounded-lg shadow-lg object-cover aspect-[4/3]"
+            />
+          </div>
+        </div>
+
+        <!-- Row 2: Baku ID - image left, text right -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <img
+              src="./img/bakuid.png"
+              alt="Baku ID event"
+              class="w-full rounded-lg shadow-lg object-cover aspect-[4/3]"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="space-y-4 text-charcoal-800 leading-relaxed">
+              <p>
+                We were proud to participate in the Hello Baku ID event, where we showcased our self-healing concrete technology to investors and industry leaders. The event provided a platform to connect with forward-thinking partners who share our vision for sustainable infrastructure.
+              </p>
+              <p>
+                Recognition at events like Baku ID reinforces our commitment to innovation and helps us scale our impact in the region and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Our Achievements - list left, image right -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-charcoal-900">Our Achievements</h2>
+            <ul class="mt-6 space-y-3 text-charcoal-800">
+              <li class="flex items-start gap-2">
+                <span class="text-forest-500 mt-1">•</span>
+                <span>Winner of local innovation and sustainability awards</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-forest-500 mt-1">•</span>
+                <span>Successful pilot projects with concrete manufacturers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-forest-500 mt-1">•</span>
+                <span>Partnerships with academic institutions for R&D</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-forest-500 mt-1">•</span>
+                <span>Recognition at Baku ID and regional startup events</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="./img/achievement.jpg"
+              alt="Team member with certificate"
+              class="w-full rounded-lg shadow-lg object-cover aspect-[3/4] max-h-[400px] object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="bg-offwhite py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-3xl font-bold text-charcoal-900">Meet the Team</h2>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white rounded-xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl font-semibold">1</div>
+            <p class="mt-4 font-semibold text-charcoal-900">Team Member</p>
+            <p class="text-sm text-charcoal-800/70">Role placeholder</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl font-semibold">2</div>
+            <p class="mt-4 font-semibold text-charcoal-900">Team Member</p>
+            <p class="text-sm text-charcoal-800/70">Role placeholder</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl font-semibold">3</div>
+            <p class="mt-4 font-semibold text-charcoal-900">Team Member</p>
+            <p class="text-sm text-charcoal-800/70">Role placeholder</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl font-semibold">4</div>
+            <p class="mt-4 font-semibold text-charcoal-900">Team Member</p>
+            <p class="text-sm text-charcoal-800/70">Role placeholder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="bg-charcoal-900 py-20 sm:py-28">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xl sm:text-2xl lg:text-3xl text-white italic leading-relaxed">
+          &ldquo;Nature has been healing itself for millennia – we're just bringing that wisdom to concrete, building a future where structures mend themselves, just like living organisms.&rdquo;
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="bg-mint pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-3 gap-8 mb-12">
+          <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-forest-500/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-semibold text-charcoal-900">Send us an email</h3>
+            <a href="mailto:info@greenstone.com" class="mt-1 text-charcoal-800/80 hover:text-forest-500 transition">info@greenstone.com</a>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-forest-500/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <h3 class="font-semibold text-charcoal-900">Give us a call</h3>
+            <a href="tel:+994514471878" class="mt-1 text-charcoal-800/80 hover:text-forest-500 transition">+994 51 447 18 78</a>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-forest-500/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="font-semibold text-charcoal-900">Visit our office</h3>
+            <p class="mt-1 text-charcoal-800/80">Baku, Azerbaijan</p>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <ul class="flex flex-wrap justify-center gap-6 text-sm text-charcoal-800/80">
+            <li><a href="#home" class="hover:text-forest-500 transition">Home</a></li>
+            <li><a href="#product" class="hover:text-forest-500 transition">Product</a></li>
+            <li><a href="#technology" class="hover:text-forest-500 transition">Technology</a></li>
+            <li><a href="#about" class="hover:text-forest-500 transition">About Us</a></li>
+            <li><a href="#team" class="hover:text-forest-500 transition">Team</a></li>
+            <li><a href="#contact" class="hover:text-forest-500 transition">Contact</a></li>
+          </ul>
+          <p class="text-sm text-charcoal-800/70">© 2026 Green Stone. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    (function () {
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var navLinks = mobileMenu.querySelectorAll('a');
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('hidden');
+      }
+
+      menuToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // Optional: solid navbar on scroll (when past hero)
+      var navbar = document.getElementById('navbar');
+      function updateNavbar() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled', 'bg-white/95', 'shadow-sm');
+        } else {
+          navbar.classList.remove('scrolled', 'bg-white/95', 'shadow-sm');
+        }
+      }
+      window.addEventListener('scroll', updateNavbar);
+      updateNavbar();
+    })();
+  </script>
+
+</body>
+</html>
