@@ -57,35 +57,42 @@
 
   <!-- Navbar -->
   <header class="fixed top-4 left-0 right-0 z-50 flex justify-center transition-all duration-300" id="navbar">
-    <nav class="pointer-events-auto max-w-5xl mx-auto px-4 sm:px-6 py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg flex items-center justify-between gap-6">
-      <a href="#home" class="flex items-center gap-2 nav-brand">
-        <img class="w-9 h-9 rounded-full shadow-sm" src="./img/logo.png" alt="Green Stone Logo" />
-        <span class="font-serif text-lg tracking-tight">Green Stone</span>
-      </a>
-      <ul class="hidden md:flex items-center gap-8 nav-links text-sm font-medium">
-        <li><a href="#home" class="transition-colors duration-300">Home</a></li>
-        <li><a href="#product" class="transition-colors duration-300">Product</a></li>
-        <li><a href="#technology" class="transition-colors duration-300">Technology</a></li>
-        <li><a href="#about" class="transition-colors duration-300">About Us</a></li>
-        <li><a href="#team" class="transition-colors duration-300">Team</a></li>
-        <li><a href="#contact" class="transition-colors duration-300">Contact</a></li>
-      </ul>
-      <button type="button" class="md:hidden p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur menu-btn" id="menu-toggle" aria-label="Open menu">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden mt-3 w-full px-4">
-      <div class="mx-auto max-w-5xl rounded-3xl border border-white/40 bg-white/80 backdrop-blur-xl shadow-xl px-6 py-4">
-      <ul class="space-y-2">
-        <li><a href="#home" class="block py-2 text-charcoal-800">Home</a></li>
-        <li><a href="#product" class="block py-2 text-charcoal-800">Product</a></li>
-        <li><a href="#technology" class="block py-2 text-charcoal-800">Technology</a></li>
-        <li><a href="#about" class="block py-2 text-charcoal-800">About Us</a></li>
-        <li><a href="#team" class="block py-2 text-charcoal-800">Team</a></li>
-        <li><a href="#contact" class="block py-2 text-charcoal-800">Contact</a></li>
-      </ul>
+  
+    <nav class="w-[90%] md:w-full md:max-w-4xl mx-auto px-5 py-3 rounded-[2.5rem] border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg transition-all duration-500 overflow-hidden" id="nav-container">
+      
+      <div class="flex items-center justify-between w-full">
+        <a href="#home" class="flex items-center gap-2 nav-brand">
+          <img class="w-9 h-9 rounded-full shadow-sm" src="./img/logo.png" alt="Green Stone Logo" />
+          <span class="font-serif text-lg tracking-tight text-white">Green Stone</span>
+        </a>
+  
+        <ul class="hidden md:flex items-center gap-8 nav-links text-sm font-medium text-white/90">
+          <li><a href="#home" class="hover:text-white transition-colors duration-300">Home</a></li>
+          <li><a href="#product" class="hover:text-white transition-colors duration-300">Product</a></li>
+          <li><a href="#technology" class="hover:text-white transition-colors duration-300">Technology</a></li>
+          <li><a href="#about" class="hover:text-white transition-colors duration-300">About Us</a></li>
+          <li><a href="#team" class="hover:text-white transition-colors duration-300">Team</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a></li>
+        </ul>
+  
+        <button type="button" class="md:hidden p-2 rounded-full border border-white/30 bg-white/10 text-white transition-transform active:scale-95" id="menu-toggle" aria-label="Toggle menu">
+          <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
-    </div>
+  
+      <div id="mobile-menu" class="hidden md:hidden flex-col opacity-0 transition-all duration-500 max-h-0 overflow-hidden">
+        <ul class="flex flex-col gap-4 text-center border-t border-white/10 mt-5 pt-6 pb-4">
+          <li><a href="#home" class="mobile-link text-white/90 hover:text-white text-lg font-serif">Home</a></li>
+          <li><a href="#product" class="mobile-link text-white/90 hover:text-white text-lg font-serif">Product</a></li>
+          <li><a href="#technology" class="mobile-link text-white/90 hover:text-white text-lg font-serif">Technology</a></li>
+          <li><a href="#about" class="mobile-link text-white/90 hover:text-white text-lg font-serif">About Us</a></li>
+          <li><a href="#team" class="mobile-link text-white/90 hover:text-white text-lg font-serif">Team</a></li>
+          <li><a href="#contact" class="mobile-link text-white/90 hover:text-white text-lg font-serif">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -93,7 +100,7 @@
     <!-- Hero -->
     <section
       id="home"
-      class="relative flex items-center justify-center h-screen w-full bg-cover bg-center"
+      class="relative flex items-center justify-center h-screen w-full bg-cover max-sm:bg-[calc(0%-440px)_center] max-md:bg-[calc(0%-40px)_center] md:bg-center overflow-x-hidden md:overflow-visible"
       style="background-image: url('./img/bg_1.png');"
     >
       <div class="absolute inset-0 bg-black/60"></div>
@@ -320,7 +327,7 @@
     </section>
 
     <!-- Quote -->
-    <section style="background-image: url('./img/hero_bg.jpg');" class="relative py-20 sm:py-28 bg-fixed bg-cover bg-center">
+    <section style="background-image: url('./img/hero_bg.jpg');" class="relative py-20 sm:py-28 bg-scroll md:bg-fixed bg-cover bg-center">
       <div class="absolute inset-0 bg-charcoal-900/60 backdrop-blur-sm"></div>
       <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-block rounded-[2.5rem] border border-white/20 bg-white/10 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-10 shadow-[0_40px_120px_rgba(15,23,42,0.7)]" data-aos="fade-up">
@@ -374,37 +381,82 @@
   </main>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
   <script>
     (function () {
-      var menuToggle = document.getElementById('menu-toggle');
-      var mobileMenu = document.getElementById('mobile-menu');
-      var navLinks = mobileMenu.querySelectorAll('a');
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navContainer = document.getElementById('nav-container'); // Ensure your <nav> has this ID
+      const navLinks = mobileMenu.querySelectorAll('a');
+      const menuIcon = document.getElementById('menu-icon'); // Ensure your <svg> has this ID
 
-      function closeMobileMenu() {
-        mobileMenu.classList.add('hidden');
+      function toggleMenu() {
+        const isHidden = mobileMenu.classList.contains('hidden');
+
+        if (isHidden) {
+          // Open State: Expand vertically and darken background
+          mobileMenu.classList.remove('hidden');
+          mobileMenu.classList.add('flex');
+          
+          // Trigger reflow for transition
+          setTimeout(() => {
+            mobileMenu.style.maxHeight = '500px'; 
+            mobileMenu.style.opacity = '1';
+          }, 10);
+
+          // Styling updates for the open state
+          navContainer.classList.add('bg-black/60', 'rounded-[1.5rem]');
+          navContainer.classList.remove('bg-white/10', 'rounded-[2.5rem]');
+          if (menuIcon) menuIcon.style.transform = 'rotate(90deg)';
+        } else {
+          // Close State: Collapse vertically
+          mobileMenu.style.maxHeight = '0';
+          mobileMenu.style.opacity = '0';
+          
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+          }, 500);
+
+          // Revert styling to original chic glass look
+          navContainer.classList.remove('bg-black/60', 'rounded-[1.5rem]');
+          navContainer.classList.add('bg-white/10', 'rounded-[2.5rem]');
+          if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+        }
       }
 
-      menuToggle.addEventListener('click', function () {
-        mobileMenu.classList.toggle('hidden');
-      });
+      menuToggle.addEventListener('click', toggleMenu);
 
+      // Close menu when a link is clicked
       navLinks.forEach(function (link) {
-        link.addEventListener('click', closeMobileMenu);
+        link.addEventListener('click', function() {
+          if (!mobileMenu.classList.contains('hidden')) {
+            toggleMenu();
+          }
+        });
       });
 
-      // Optional: solid navbar on scroll (when past hero)
-      var navbar = document.getElementById('navbar');
+      // Scroll Logic for Navbar Transparency/Blur
+      const navbar = document.getElementById('navbar');
       function updateNavbar() {
         if (window.scrollY > 50) {
           navbar.classList.add('scrolled');
+          // Optional: darken the pill slightly on scroll for better visibility on white backgrounds
         } else {
           navbar.classList.remove('scrolled');
         }
       }
+
       window.addEventListener('scroll', updateNavbar);
       updateNavbar();
     })();
-    AOS.init({ duration: 1200, once: true });
+
+    // Initialize AOS with the requested "luxury" duration
+    AOS.init({ 
+      duration: 1200, 
+      once: true,
+      mirror: false 
+    });
   </script>
 
 </body>
