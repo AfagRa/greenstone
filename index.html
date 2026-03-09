@@ -40,8 +40,8 @@
     };
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
     /* Navbar text color states */
     #navbar:not(.scrolled) .nav-brand span:last-child,
     #navbar:not(.scrolled) .nav-links a,
@@ -62,7 +62,7 @@
       
       <div class="flex items-center justify-between w-full">
         <a href="#home" class="flex items-center gap-2 nav-brand">
-          <img class="w-9 h-9 rounded-full shadow-sm" src="./img/logo.png" alt="Green Stone Logo" />
+          <img class="w-9 h-9 rounded-full shadow-sm" src="./img/logo.png" alt="Green Stone logo" />
           <span class="font-serif text-lg tracking-tight text-white">Green Stone</span>
         </a>
   
@@ -138,6 +138,7 @@
                   src="./img/product.jpg"
                   alt="Self-healing hydrogel capsules in a petri dish"
                   class="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -169,8 +170,9 @@
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sage-200/60 shadow-sm mb-4">
               <img
                 src="./img/icon2.png"
-                alt="Bacteria Cultivation"
+                alt="Illustration for bacteria cultivation technology"
                 class="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <h3 class="text-lg font-bold text-charcoal-900">Bacteria Cultivation</h3>
@@ -180,7 +182,7 @@
           </div>
           <div class="text-center rounded-3xl border border-white/60 bg-white/70 backdrop-blur-xl shadow-lg shadow-emerald-900/5 px-6 py-8 hover:scale-105 transition-transform duration-300 ease-out" data-aos="zoom-in" data-aos-delay="150">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sage-200/60 shadow-sm mb-4">
-              <img src="./img/icon3.png" alt="Hydrogel Preparation" class="w-full h-full object-cover" />
+              <img src="./img/icon3.png" alt="Illustration for hydrogel preparation process" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <h3 class="text-lg font-bold text-charcoal-900">Hydrogel Preparation</h3>
             <p class="mt-2 text-charcoal-800 text-sm leading-relaxed">
@@ -189,7 +191,7 @@
           </div>
           <div class="text-center rounded-3xl border border-white/60 bg-white/70 backdrop-blur-xl shadow-lg shadow-emerald-900/5 px-6 py-8 hover:scale-105 transition-transform duration-300 ease-out" data-aos="zoom-in" data-aos-delay="300">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sage-200/60 shadow-sm mb-4">
-              <img src="./img/icon1.png" alt="Capsules Ready for Cement" class="w-full h-full object-cover" />
+              <img src="./img/icon1.png" alt="Illustration for self-healing capsules mixed into cement" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <h3 class="text-lg font-bold text-charcoal-900">Capsules Ready for Cement</h3>
             <p class="mt-2 text-charcoal-800 text-sm leading-relaxed">
@@ -223,6 +225,7 @@
                 src="./img/greenhackathon.png"
                 alt="Green Stone team with award"
                 class="relative w-full rounded-[60px] border border-white/70 shadow-[0_32px_80px_rgba(15,23,42,0.35)] object-cover aspect-[4/3]"
+                loading="lazy"
               />
             </div>
           </div>
@@ -237,6 +240,7 @@
                 src="./img/bakuid.png"
                 alt="Baku ID event"
                 class="relative w-full rounded-[60px] border border-sage-200/80 shadow-[0_32px_80px_rgba(15,23,42,0.28)] object-cover aspect-[4/3]"
+                loading="lazy"
               />
             </div>
           </div>
@@ -282,6 +286,7 @@
                 src="./img/achievement.jpg"
                 alt="Team member with certificate"
                 class="relative w-full rounded-[60px] border border-white/70 shadow-[0_32px_80px_rgba(15,23,42,0.28)] object-cover aspect-[3/4] max-h-[400px] object-top"
+                loading="lazy"
               />
             </div>
           </div>
@@ -296,28 +301,28 @@
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="bg-white/80 rounded-3xl shadow-lg shadow-emerald-900/5 p-6 text-center border border-sage-200/60 hover:scale-105 transition-transform duration-300 ease-out" data-aos="fade-up" data-aos-delay="0">
             <div class="w-32 h-32 mx-auto rounded-full border-[6px] border-teal-400 bg-white shadow-md flex items-center justify-center overflow-hidden aspect-square">
-              <img src="./img/zarifa_asadullayeva.png" alt="Zarifa Asadullayeva" class="w-full h-full object-cover" />
+              <img src="./img/zarifa_asadullayeva.png" alt="Portrait of co-founder Zarifa Asadullayeva" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <p class="mt-4 font-semibold text-charcoal-900">Zarifa Asadullayeva</p>
             <p class="text-sm text-charcoal-800/70">Co-founder</p>
           </div>
           <div class="bg-white/80 rounded-3xl shadow-lg shadow-emerald-900/5 p-6 text-center border border-sage-200/60 hover:scale-105 transition-transform duration-300 ease-out" data-aos="fade-up" data-aos-delay="100">
             <div class="w-32 h-32 mx-auto rounded-full border-[6px] border-teal-400 bg-white shadow-md flex items-center justify-center overflow-hidden aspect-square">
-              <img src="./img/solmaz_mahmudova.png" alt="Solmaz Mahmudova" class="w-full h-full object-cover" />
+              <img src="./img/solmaz_mahmudova.png" alt="Portrait of co-founder Solmaz Mahmudova" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <p class="mt-4 font-semibold text-charcoal-900">Solmaz Mahmudova</p>
             <p class="text-sm text-charcoal-800/70">Co-founder</p>
           </div>
           <div class="bg-white/80 rounded-3xl shadow-lg shadow-emerald-900/5 p-6 text-center border border-sage-200/60 hover:scale-105 transition-transform duration-300 ease-out" data-aos="fade-up" data-aos-delay="200">
             <div class="w-32 h-32 mx-auto rounded-full border-[6px] border-teal-400 bg-white shadow-md flex items-center justify-center overflow-hidden aspect-square">
-              <img src="./img/rima_guliyeva.png" alt="Rima Guliyeva" class="w-full h-full object-cover" />
+              <img src="./img/rima_guliyeva.png" alt="Portrait of senior advisor Rima Guliyeva" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <p class="mt-4 font-semibold text-charcoal-900">Rima Guliyeva</p>
             <p class="text-sm text-charcoal-800/70">Senior Advisor</p>
           </div>
           <div class="bg-white/80 rounded-3xl shadow-lg shadow-emerald-900/5 p-6 text-center border border-sage-200/60 hover:scale-105 transition-transform duration-300 ease-out" data-aos="fade-up" data-aos-delay="300">
             <div class="w-32 h-32 mx-auto rounded-full border-[6px] border-teal-400 bg-white shadow-md flex items-center justify-center overflow-hidden aspect-square">
-              <img src="./img/susan_abdullayeva.png" alt="Susan Abdullayeva" class="w-full h-full object-cover" />
+              <img src="./img/susan_abdullayeva.png" alt="Portrait of advisor Susan Abdullayeva" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <p class="mt-4 font-semibold text-charcoal-900">Susan Abdullayeva</p>
             <p class="text-sm text-charcoal-800/70">Advisor</p>
@@ -382,82 +387,83 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   
-  <script>
-    (function () {
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const navContainer = document.getElementById('nav-container'); // Ensure your <nav> has this ID
-      const navLinks = mobileMenu.querySelectorAll('a');
-      const menuIcon = document.getElementById('menu-icon'); // Ensure your <svg> has this ID
+<script>
+  (() => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navContainer = document.getElementById('nav-container');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
 
-      function toggleMenu() {
-        const isHidden = mobileMenu.classList.contains('hidden');
+    const openMenu = () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
 
-        if (isHidden) {
-          // Open State: Expand vertically and darken background
-          mobileMenu.classList.remove('hidden');
-          mobileMenu.classList.add('flex');
-          
-          // Trigger reflow for transition
-          setTimeout(() => {
-            mobileMenu.style.maxHeight = '500px'; 
-            mobileMenu.style.opacity = '1';
-          }, 10);
-
-          // Styling updates for the open state
-          navContainer.classList.add('bg-black/60', 'rounded-[1.5rem]');
-          navContainer.classList.remove('bg-white/10', 'rounded-[2.5rem]');
-          if (menuIcon) menuIcon.style.transform = 'rotate(90deg)';
-        } else {
-          // Close State: Collapse vertically
-          mobileMenu.style.maxHeight = '0';
-          mobileMenu.style.opacity = '0';
-          
-          setTimeout(() => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-          }, 500);
-
-          // Revert styling to original chic glass look
-          navContainer.classList.remove('bg-black/60', 'rounded-[1.5rem]');
-          navContainer.classList.add('bg-white/10', 'rounded-[2.5rem]');
-          if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
-        }
-      }
-
-      menuToggle.addEventListener('click', toggleMenu);
-
-      // Close menu when a link is clicked
-      navLinks.forEach(function (link) {
-        link.addEventListener('click', function() {
-          if (!mobileMenu.classList.contains('hidden')) {
-            toggleMenu();
-          }
-        });
+      // trigger reflow for smooth transition
+      requestAnimationFrame(() => {
+        mobileMenu.style.maxHeight = '500px';
+        mobileMenu.style.opacity = '1';
       });
 
-      // Scroll Logic for Navbar Transparency/Blur
-      const navbar = document.getElementById('navbar');
-      function updateNavbar() {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-          // Optional: darken the pill slightly on scroll for better visibility on white backgrounds
-        } else {
-          navbar.classList.remove('scrolled');
-        }
+      navContainer.classList.add('bg-black/60', 'rounded-[1.5rem]');
+      navContainer.classList.remove('bg-white/10', 'rounded-[2.5rem]');
+      if (menuIcon) menuIcon.style.transform = 'rotate(90deg)';
+    };
+
+    const closeMenu = () => {
+      mobileMenu.style.maxHeight = '0';
+      mobileMenu.style.opacity = '0';
+
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      }, 500);
+
+      navContainer.classList.remove('bg-black/60', 'rounded-[1.5rem]');
+      navContainer.classList.add('bg-white/10', 'rounded-[2.5rem]');
+      if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+    };
+
+    const toggleMenu = () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        openMenu();
+      } else {
+        closeMenu();
       }
+    };
 
-      window.addEventListener('scroll', updateNavbar);
-      updateNavbar();
-    })();
+    if (menuToggle) {
+      menuToggle.addEventListener('click', toggleMenu);
+    }
 
-    // Initialize AOS with the requested "luxury" duration
-    AOS.init({ 
-      duration: 1200, 
-      once: true,
-      mirror: false 
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+          closeMenu();
+        }
+      });
     });
-  </script>
+
+    const updateNavbar = () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateNavbar();
+
+    AOS.init({
+      duration: 1200,
+      once: true,
+      mirror: false
+    });
+  })();
+</script>
 
 </body>
 </html>
